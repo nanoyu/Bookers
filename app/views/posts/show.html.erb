@@ -1,0 +1,12 @@
+
+<% if flash[:notice] %>
+      <div class="flash">
+        <span class="notice"><%= flash[:notice] %></span>
+      </div>
+    <% end %>
+
+<p><strong class="show">Title:</strong><%= @post.title %></p>
+<p><strong class="show">Body:</strong><%= @post.body %></p>
+
+
+<%= link_to 'Edit', edit_post_path(@post.id), class: "edit" %> | <%= link_to 'Back', posts_new_path, class: "back" %>
